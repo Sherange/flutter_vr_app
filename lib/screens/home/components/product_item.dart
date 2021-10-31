@@ -16,11 +16,8 @@ class ProductItem extends StatelessWidget {
     return GestureDetector(
       onTap: () {},
       child: Container(
-        margin: index == 0
-            ? const EdgeInsets.fromLTRB(
-                defaultPadding, 0, defaultPadding / 2, 0)
-            : const EdgeInsets.symmetric(horizontal: defaultPadding),
-        height: MediaQuery.of(context).size.height * 0.3,
+        margin:
+            const EdgeInsets.fromLTRB(defaultPadding, 0, defaultPadding / 2, 0),
         width: 150,
         child: Stack(children: [
           Column(
@@ -33,7 +30,7 @@ class ProductItem extends StatelessWidget {
                     item.images.toString(),
                   ),
                 ),
-                flex: 2,
+                flex: 1,
               ),
               Expanded(
                 child: Padding(

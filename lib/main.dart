@@ -14,7 +14,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
         title: 'Mobile App - Virtual Reality Store',
         theme: ThemeData.light().copyWith(
-            primaryColor: primaryColor, scaffoldBackgroundColor: bgColor),
+            splashColor: Colors.transparent,
+            primaryColor: primaryColor,
+            scaffoldBackgroundColor: bgColor),
         home: const HomeScreen());
   }
 }

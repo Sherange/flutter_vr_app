@@ -72,6 +72,36 @@ class _HomeScreenState extends State<HomeScreen> {
           ],
         ),
       ),
+      bottomNavigationBar: BottomNavigationBar(
+        elevation: 0,
+        unselectedItemColor: darkColor,
+        items: const <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            backgroundColor: bgColor,
+            label: 'Home',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.business),
+            backgroundColor: bgColor,
+            label: 'Business',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.school),
+            backgroundColor: bgColor,
+            label: 'School',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.settings),
+            backgroundColor: bgColor,
+            label: 'Settings',
+          ),
+        ],
+        currentIndex: 0,
+        selectedItemColor: primaryColor,
+        showSelectedLabels: false,
+        onTap: (index) {},
+      ),
     );
   }
 }
