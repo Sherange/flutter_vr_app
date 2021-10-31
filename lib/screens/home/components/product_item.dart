@@ -30,7 +30,7 @@ class ProductItem extends StatelessWidget {
                     item.images.toString(),
                   ),
                 ),
-                flex: 1,
+                flex: 2,
               ),
               Expanded(
                 child: Padding(

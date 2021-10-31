@@ -13,15 +13,17 @@ class FilterButton extends StatelessWidget {
     return GestureDetector(
       onTap: () {},
       child: Container(
-        margin: const EdgeInsets.fromLTRB(
-            defaultPadding, defaultPadding, defaultPadding / 2, defaultPadding),
+        margin: const EdgeInsets.only(
+            left: defaultPadding / 2,
+            top: defaultPadding,
+            bottom: defaultPadding),
         padding: const EdgeInsets.all(defaultPadding / 2),
         child: Center(
           child: Text(
             item,
             textAlign: TextAlign.center,
             style: const TextStyle(
-              fontSize: 18,
+              fontSize: 16,
               fontWeight: FontWeight.w600,
             ),
           ),

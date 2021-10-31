@@ -10,7 +10,7 @@ class FilterButtonList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: MediaQuery.of(context).size.height * 0.1,
+      height: 80,
       child: ListView.builder(
           shrinkWrap: true,
           itemCount: filters.length,
