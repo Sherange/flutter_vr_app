@@ -10,7 +10,8 @@ class ProductListView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
+    return SizedBox(
+      height: MediaQuery.of(context).size.height * 0.35,
       child: FutureBuilder(
           future: ApiService().fetchProducts(),
           builder: (context, snapshot) {

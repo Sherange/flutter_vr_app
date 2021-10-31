@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:vr_app/constants/theme.dart';
-import 'package:vr_app/screens/home/components/filter_button.dart';
+import 'package:vr_app/screens/home/components/filter_button_list.dart';
 import 'package:vr_app/screens/home/components/product_list_view.dart';
 import 'package:vr_app/screens/home/components/promotional_banner.dart';
 import 'package:vr_app/screens/home/components/promotional_text.dart';
@@ -64,13 +64,11 @@ class _HomeScreenState extends State<HomeScreen> {
       body: SafeArea(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            const PromotionalText(),
-            const PromotionalBanner(),
-            Row(
-              children: const [FilterButton(), FilterButton()],
-            ),
-            const ProductListView(),
+          children: const [
+            PromotionalText(),
+            PromotionalBanner(),
+            FilterButtonList(),
+            ProductListView(),
           ],
         ),
       ),

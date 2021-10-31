@@ -2,8 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:vr_app/constants/theme.dart';
 
 class FilterButton extends StatelessWidget {
+  final String item;
   const FilterButton({
     Key? key,
+    required this.item,
   }) : super(key: key);
 
   @override
@@ -16,9 +18,13 @@ class FilterButton extends StatelessWidget {
           vertical: defaultPadding,
         ),
         padding: const EdgeInsets.all(defaultPadding / 2),
-        child: const Text(
-          "All Product",
-          style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
+        child: Text(
+          item,
+          textAlign: TextAlign.center,
+          style: const TextStyle(
+            fontSize: 18,
+            fontWeight: FontWeight.w600,
+          ),
         ),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10.0),
