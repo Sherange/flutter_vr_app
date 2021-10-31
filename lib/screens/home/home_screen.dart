@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:vr_app/constants/theme.dart';
+import 'package:vr_app/screens/home/components/filter_button.dart';
 import 'package:vr_app/screens/home/components/product_item.dart';
 import 'package:vr_app/screens/home/components/promotional_banner.dart';
 import 'package:vr_app/screens/home/components/promotional_text.dart';
@@ -52,10 +53,18 @@ class HomeScreen extends StatelessWidget {
       body: SafeArea(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
-          children: const [
-            PromotionalText(),
-            PromotionalBanner(),
-            ProductItem(),
+          children: [
+            const PromotionalText(),
+            const PromotionalBanner(),
+            Row(
+              children: const [FilterButton(), FilterButton()],
+            ),
+            Row(
+              children: const [
+                ProductItem(),
+                ProductItem(),
+              ],
+            )
           ],
         ),
       ),
