@@ -1,9 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:vr_app/constants/theme.dart';
+import 'package:vr_app/models/product.dart';
 
 class ProductItem extends StatelessWidget {
+  final Product item;
+  final int index;
   const ProductItem({
     Key? key,
+    required this.item,
+    required this.index,
   }) : super(key: key);
 
   @override
@@ -11,7 +16,10 @@ class ProductItem extends StatelessWidget {
     return GestureDetector(
       onTap: () {},
       child: Container(
-        margin: const EdgeInsets.symmetric(horizontal: defaultPadding),
+        margin: index == 0
+            ? const EdgeInsets.fromLTRB(
+                defaultPadding, 0, defaultPadding / 2, 0)
+            : const EdgeInsets.symmetric(horizontal: defaultPadding),
         height: MediaQuery.of(context).size.height * 0.3,
         width: 150,
         child: Stack(children: [
@@ -21,7 +29,9 @@ class ProductItem extends StatelessWidget {
               Expanded(
                 child: Padding(
                   padding: const EdgeInsets.all(defaultPadding / 4),
-                  child: Image.asset('assets/images/vr_lens.png'),
+                  child: Image.network(
+                    item.images.toString(),
+                  ),
                 ),
                 flex: 2,
               ),
@@ -30,21 +40,21 @@ class ProductItem extends StatelessWidget {
                   padding: const EdgeInsets.all(8.0),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
-                    children: const [
+                    children: [
                       Text(
-                        'HP Reverb G2 sherange',
-                        maxLines: 1,
-                        style: TextStyle(
+                        item.title,
+                        maxLines: 2,
+                        style: const TextStyle(
                           fontSize: 16,
                           overflow: TextOverflow.ellipsis,
                           fontWeight: FontWeight.w800,
                         ),
                       ),
-                      SizedBox(height: defaultPadding / 2),
+                      const SizedBox(height: defaultPadding / 2),
                       Text(
-                        "\$ 100.00",
+                        item.price,
                         maxLines: 1,
-                        style: TextStyle(
+                        style: const TextStyle(
                           fontSize: 16,
                           overflow: TextOverflow.ellipsis,
                         ),

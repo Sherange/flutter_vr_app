@@ -1,12 +1,23 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:vr_app/constants/theme.dart';
 import 'package:vr_app/screens/home/components/filter_button.dart';
-import 'package:vr_app/screens/home/components/product_item.dart';
+import 'package:vr_app/screens/home/components/product_list_view.dart';
 import 'package:vr_app/screens/home/components/promotional_banner.dart';
 import 'package:vr_app/screens/home/components/promotional_text.dart';
 
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
+
+  @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
+  @override
+  void initState() {
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -59,12 +70,7 @@ class HomeScreen extends StatelessWidget {
             Row(
               children: const [FilterButton(), FilterButton()],
             ),
-            Row(
-              children: const [
-                ProductItem(),
-                ProductItem(),
-              ],
-            )
+            const ProductListView(),
           ],
         ),
       ),
