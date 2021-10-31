@@ -19,17 +19,20 @@ class PromotionalBanner extends StatelessWidget {
               style: TextStyle(
                   fontSize: 24,
                   height: 1.5,
-                  color: Colors.white,
+                  color: bgColor,
                   fontWeight: FontWeight.w600),
             ),
           ),
           decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(8.0), color: primaryColor),
+              borderRadius: BorderRadius.circular(18.0), color: primaryColor),
         ),
         Positioned(
           top: MediaQuery.of(context).size.height * 0.06,
-          right: -50,
-          child: Image.asset('assets/images/vr_box.png'),
+          right: -defaultPadding,
+          child: Image.asset(
+            'assets/images/vr_box.png',
+            fit: BoxFit.contain,
+          ),
         ),
       ],
     );

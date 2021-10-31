@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:vr_app/constants/theme.dart';
+import 'package:vr_app/screens/home/components/product_item.dart';
 import 'package:vr_app/screens/home/components/promotional_banner.dart';
 import 'package:vr_app/screens/home/components/promotional_text.dart';
 
@@ -54,6 +55,7 @@ class HomeScreen extends StatelessWidget {
           children: const [
             PromotionalText(),
             PromotionalBanner(),
+            ProductItem(),
           ],
         ),
       ),
