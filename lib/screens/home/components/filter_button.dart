@@ -11,12 +11,12 @@ class FilterButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {},
+      onTap: () {
+        Navigator.pushNamed(context, '/detail');
+      },
       child: Container(
         margin: const EdgeInsets.only(
-            left: defaultPadding / 2,
-            top: defaultPadding,
-            bottom: defaultPadding),
+            left: defaultPadding, top: defaultPadding, bottom: defaultPadding),
         padding: const EdgeInsets.all(defaultPadding / 2),
         child: Center(
           child: Text(

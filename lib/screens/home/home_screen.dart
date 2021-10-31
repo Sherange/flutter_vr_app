@@ -1,3 +1,5 @@
+import 'dart:ffi';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:vr_app/constants/theme.dart';
@@ -18,6 +20,8 @@ class _HomeScreenState extends State<HomeScreen> {
   void initState() {
     super.initState();
   }
+
+  handleNavigation() {}
 
   @override
   Widget build(BuildContext context) {
@@ -68,7 +72,7 @@ class _HomeScreenState extends State<HomeScreen> {
             PromotionalText(),
             PromotionalBanner(),
             FilterButtonList(),
-            ProductListView(),
+            // ProductListView(),
           ],
         ),
       ),

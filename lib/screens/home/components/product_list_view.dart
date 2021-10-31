@@ -15,7 +15,7 @@ class ProductListView extends StatelessWidget {
       child: FutureBuilder(
           future: ApiService().fetchProducts(),
           builder: (context, snapshot) {
-            if (snapshot.connectionState == ConnectionState.done) {
+            if (snapshot.hasData) {
               List<Product> list = snapshot.data as List<Product>;
 
               return ListView.builder(

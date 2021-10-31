@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:vr_app/constants/theme.dart';
+import 'package:vr_app/screens/product_detail/product_detail_screen.dart';
 import 'screens/home/home_screen.dart';
 
 void main() {
@@ -12,11 +13,16 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        title: 'Mobile App - Virtual Reality Store',
-        theme: ThemeData.light().copyWith(
-            splashColor: Colors.transparent,
-            primaryColor: primaryColor,
-            scaffoldBackgroundColor: bgColor),
-        home: const HomeScreen());
+      title: 'Mobile App - Virtual Reality Store',
+      routes: {
+        '/': (context) => const HomeScreen(),
+        '/detail': (context) => const ProductDetailScreen(),
+      },
+      theme: ThemeData.light().copyWith(
+          splashColor: Colors.transparent,
+          primaryColor: primaryColor,
+          scaffoldBackgroundColor: bgColor),
+      initialRoute: '/',
+    );
   }
 }
