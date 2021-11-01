@@ -72,7 +72,7 @@ class _HomeScreenState extends State<HomeScreen> {
             PromotionalText(),
             PromotionalBanner(),
             FilterButtonList(),
-            // ProductListView(),
+            ProductListView(),
           ],
         ),
       ),
