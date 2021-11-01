@@ -1,9 +1,6 @@
-# Portfolio App
+# Virtual Reality Store App
 
-<img src="desktop.png" alt="desktop" width="100%"/>
-
-Flutter Responsive Portfolio App
-* For Web: 
+<img src="app_preview.png" alt="app_preview" width="80%"/>
 
 ## Getting Started
 This a fluttet mobile application UI. that create for Virtual Reality Store. The app code is preloaded with some basic widgets and basic architecture. 
